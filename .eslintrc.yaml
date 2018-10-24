@@ -1,0 +1,371 @@
+extends: eslint:recommended
+env:
+  browser: true
+  node: true
+  es6: true
+parser: espree
+globals:
+  angular: false
+  $: false
+rules:
+  # Stylistic Issues #########################################
+  array-bracket-spacing:
+  - 0
+  - never
+  block-spacing: 0
+  brace-style:
+  - 0
+  - 1tbs
+  camelcase: error
+  capitalized-comments: 0
+  comma-dangle:
+  - 0
+  - never
+  comma-spacing: 0
+  comma-style:
+  - 2
+  - last
+  computed-property-spacing:
+  - 0
+  - never
+  consistent-this:
+  - 0
+  - that
+  eol-last: 0
+  func-call-spacing: 0
+  func-name-matching: 0
+  func-names: 1
+  func-style:
+  - 0
+  - declaration
+  # id-blacklist
+  id-length: 0
+  id-match: 0
+  indent:
+  - 2
+  - 2
+  - SwitchCase: 1
+    ArrayExpression: "first"
+    ObjectExpression: "first"
+  jsx-quotes:
+  - 0
+  - prefer-double
+  key-spacing:
+  - 0
+  -   beforeColon: false
+      afterColon: true
+  keyword-spacing:
+  - 0
+  - always
+  # line-comment-position
+  linebreak-style:
+  - 0
+  - unix
+  lines-around-comment: 0
+  # lines-around-directive
+  max-depth:
+  - 1
+  - 4
+  max-len:
+  - 2
+  -   code: 120
+      ignoreComments: true
+  # max-lines
+  max-nested-callbacks:
+  - 0
+  - 2
+  max-params:
+  - 1
+  - 6
+  # max-statements-per-line
+  max-statements:
+  - 1
+  - 10
+  # multiline-ternary
+  new-cap: 2
+  new-parens: 0
+  newline-after-var: 0
+  # newline-before-return
+  # newline-per-chained-call
+  no-array-constructor: 0
+  no-bitwise: 2
+  no-continue: 0
+  no-inline-comments: 0
+  no-lonely-if: 0
+  # no-mixed-operators
+  no-mixed-spaces-and-tabs:
+  - 2
+  - false
+  no-multiple-empty-lines:
+  - 0
+  -   max: 2
+  no-negated-condition: 0
+  no-nested-ternary: 0
+  no-new-object: 0
+  no-plusplus: 0
+  no-restricted-syntax: 0
+  # no-tabs
+  no-ternary: 0
+  no-trailing-spaces: 0
+  no-underscore-dangle: 0
+  no-unneeded-ternary: 0
+  # no-whitespace-before-property
+  # object-curly-newline
+  object-curly-spacing:
+  - 0
+  - never
+  # object-property-newline
+  # one-var-declaration-per-line
+  one-var:
+  - 0
+  - always
+  operator-assignment:
+  - 0
+  - always
+  operator-linebreak: 0
+  padded-blocks: 0
+  quote-props: 0
+  quotes:
+  - 2
+  - single
+  require-jsdoc: 0
+  semi: 0
+  semi-spacing:
+  - 0
+  -   before: false
+      after: true
+  sort-vars: 0
+  # sort-keys
+  space-before-blocks:
+  - 0
+  - always
+  space-before-function-paren:
+  - 0
+  - always
+  space-in-parens:
+  - 0
+  - never
+  space-infix-ops: 0
+  space-unary-ops:
+  - 0
+  -   words: true
+      nonwords: false
+  spaced-comment: 0
+  # unicode-bom
+  wrap-regex: 0
+
+
+
+  # Possible Errors #########################################
+  # no-await-in-loop
+  no-cond-assign: 2
+  no-console: 0
+  no-constant-condition: 2
+  no-control-regex: 2
+  no-debugger: 2
+  no-dupe-keys: 2
+  no-dupe-args: 2
+  no-duplicate-case: 2
+  no-empty: 2
+  no-empty-character-class: 2
+  no-ex-assign: 2
+  no-extra-boolean-cast: 2
+  no-extra-parens: 0
+  no-extra-semi: 2
+  no-func-assign: 2
+  no-inner-declarations:
+  - 2
+  - functions
+  no-invalid-regexp: 2
+  no-irregular-whitespace: 2
+  no-obj-calls: 2
+  # no-prototype-builtins
+  no-regex-spaces: 2
+  no-sparse-arrays: 2
+  # no-template-curly-in-string
+  no-unexpected-multiline: 0
+  no-unreachable: 2
+  # no-unsafe-finally
+  no-unsafe-negation: 2
+  use-isnan: 2
+  valid-jsdoc: 0
+  valid-typeof: 2
+
+  # Best Practices #########################################
+  accessor-pairs: 2
+  #array-callback-return: 1
+  block-scoped-var: 0
+  # class-methods-use-this
+  complexity:
+  - 2
+  - 11
+  consistent-return: 0
+  curly:
+  - 2
+  - all
+  default-case: 0
+  dot-location: 0
+  dot-notation:
+  - 0
+  -   allowKeywords: true
+  eqeqeq: 2
+  guard-for-in: 2
+  no-alert: 1
+  no-caller: 2
+  # no-case-declarations
+  no-div-regex: 0
+  no-else-return: 0
+  no-empty-function: 1
+  # no-empty-pattern
+
+
+  no-eq-null: 2
+  no-eval: 0
+
+  no-extend-native: 2
+  no-extra-bind: 0
+  # no-extra-label
+  no-fallthrough: 2
+  no-floating-decimal: 0
+  # no-global-assign
+  no-implicit-coercion: 0
+  # no-implicit-globals
+  no-implied-eval: 0
+
+
+  no-invalid-this: 0
+  no-iterator: 0
+  no-labels: 0
+  no-lone-blocks: 0
+  no-loop-func: 2
+  # no-magic-numbers
+  no-multi-spaces: 0
+  no-multi-str: 0
+  no-new-func: 0
+  no-new-wrappers: 0
+  no-new: 2
+  no-octal: 2
+  no-octal-escape: 0
+  no-param-reassign: 0
+  no-proto: 0
+  no-redeclare: 2
+  # no-restricted-properties
+  no-return-assign: 0
+  # no-return-await
+  no-script-url: 0
+  # no-self-assign
+  no-self-compare: 0
+  no-sequences: 0
+  no-throw-literal: 0
+  # no-unmodified-loop-condition
+  no-unused-expressions: 0
+  # no-unused-labels
+  no-useless-call: 0
+  no-useless-concat: 2
+  # no-useless-escape
+  # no-useless-return
+  no-void: 0
+  no-warning-comments:
+  - 0
+  -   terms:
+      - todo
+      - fixme
+      - xxx
+      location: start
+  no-with: 0
+  radix: 0
+  # require-await
+  vars-on-top: 0
+  wrap-iife:
+  - 2
+  - any
+  yoda:
+  - 0
+  - never
+
+
+
+
+
+  # Strict Mode #########################################
+  strict: 0
+
+
+
+  # Variables #########################################
+  init-declarations: 0
+  no-catch-shadow: 0
+  no-delete-var: 2
+  no-label-var: 0
+  # no-restricted-globals
+  no-shadow:
+  - 2
+  - allow:
+    - options
+    - callback
+  no-shadow-restricted-names: 0
+  no-undef: 2
+  no-undef-init: 0
+  no-undefined: 0
+  no-unused-vars:
+  - 2
+  -   vars: all
+      args: after-used
+      argsIgnorePattern: options
+  no-use-before-define:
+  - 2
+  -   functions: true
+
+
+
+
+  # Node.js and CommonJS
+  callback-return:
+  - 1
+  - ["callback", "cb", "next"]
+  global-require: 1
+  handle-callback-err: 2
+  no-mixed-requires:
+  - 1
+  - false
+  no-new-require: 0
+  no-path-concat: 2
+  no-process-env: 2
+  no-process-exit: 2
+  no-restricted-modules: 0
+  no-sync: 1
+
+
+  # ECMAScript 6
+
+  # arrow-body-style
+  arrow-parens: 0
+  arrow-spacing: 0
+  constructor-super: 0
+  generator-star-spacing: 0
+  no-class-assign: 0
+  # no-confusing-arrow
+  no-const-assign: 0
+  no-dupe-class-members: 0
+  # no-duplicate-imports
+  no-this-before-super: 0
+  # no-new-symbol
+  # no-restricted-imports
+  # no-useless-computed-key
+  # no-useless-constructor
+  # no-useless-rename
+  object-shorthand: 0
+  no-var: 0
+  prefer-arrow-callback: 0
+  prefer-const: 0
+  # prefer-destructuring
+  # prefer-numeric-literals
+  # prefer-rest-params
+  prefer-spread: 0
+  prefer-template: 0
+  require-yield: 0
+  # rest-spread-spacing
+  # sort-imports
+  # symbol-description
+  # template-curly-spacing
+  # yield-star-spacing

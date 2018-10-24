@@ -1,0 +1,9 @@
+<div id="settings-object" class="github-embed-container"></div>
+<script>
+var settings = {
+      "owner": "{{data.widget.owner}}",
+      "repo": "{{data.widget.repo}}",
+      "ref": "{{data.widget.ref}}",
+      "embed": {{data.widget.embed | dump | safe }}
+    };
+</script>

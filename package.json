@@ -1,0 +1,61 @@
+{
+  "name": "charlesvstephens",
+  "version": "0.1.0",
+  "description": "charlesvstephens",
+  "main": "app.js",
+  "author": "Charles Stephens",
+  "email": "charlesvstephens@gmail.com",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js & set APOS_MINIFY=1 & node app apostrophe:generation --create-bundle=prod-bundle",
+    "test": "tape 'tests/**/*.js'",
+    "cover": "istanbul cover ./node_modules/tape/bin/tape 'tests/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "apostrophe": "^2.47.0",
+    "apostrophe-address-widgets": "^1.0.0",
+    "apostrophe-link-widgets": "^1.0.4",
+    "apostrophe-optimizer": "^2.0.1",
+    "apostrophe-pieces-submit-widgets": "^2.0.2",
+    "apostrophe-redirects": "^2.2.0",
+    "apostrophe-seo": "^1.1.2",
+    "apostrophe-site-map": "^2.4.4",
+    "apostrophe-svg-sprites": "^1.0.14",
+    "babel-polyfill": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "github-embed": "^1.0.1",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "bootstrap": "^4.1.3",
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.3.0",
+    "grunt": "^1.0.3",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-nodemon": "^0.5.4",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-shell": "^2.1.0",
+    "grunt-webpack": "^3.1.3",
+    "istanbul": "^0.4.5",
+    "less-loader": "^4.1.0",
+    "load-grunt-configs": "^1.0.0",
+    "load-grunt-tasks": "^4.0.0",
+    "style-loader": "^0.23.1",
+    "tape": "^4.9.1",
+    "time-grunt": "^1.4.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}

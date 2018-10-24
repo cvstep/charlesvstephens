@@ -1,0 +1,41 @@
+.form-control {
+ border-radius: 0rem;
+
+
+}
+.btn {
+  border-radius: 0rem;
+}
+.btn-primary {
+  border-color: @secondary;
+  color: @primary-text;
+  background-color: @secondary;
+}
+.btn-primary:hover  {
+  background-color: @secondary;
+  border-color: @secondary;
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle,
+.btn-primary:active  {
+  background-color: @primary-light;
+  border-color: @primary-light;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus  {
+  box-shadow: 0 0 0 0.2rem @primary-light;
+}
+.btn-outline-success  {
+  border-color: @secondary;
+  color: @primary-text;
+}
+.btn-outline-success:hover  {
+  background-color: @secondary;
+  border-color: @secondary;
+}
+
+.apos-button-group {
+  color: @apos-dark
+}

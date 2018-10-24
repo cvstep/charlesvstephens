@@ -1,0 +1,42 @@
+{# extends data.outerLayout #}
+{% extends "layout.html" %}
+
+{% block main %}
+  <div class="container">
+
+    <form method="GET" action="{{ data.url | e }}" class="my-2 my-lg-0" data-apos-search-page-form >
+      {% if data.filters %}
+        <h1 class="ld-meta my-4">{{ __('Filter Results By Type') }}</h1>
+        {% for filter in data.filters %}
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" data-apos-search-filter name="{{ filter.name | e }}" id="{{ filter.name | e }}"
+                {% if filter.value %}checked{% endif %}
+                value="1"
+            />
+            <label class="form-check-label" for="{{ filter.name | e }}">
+              {{ filter.label | e }}
+            </label>
+          </div>
+          {% endfor %}
+      {% endif %}
+      <h2 class="ld-meta">{{ __('New Search') }}</h2>
+      <div class="form-row align-items-centerS">
+        <div class="col-7 ">
+          <input name="q" class="form-control mx-sm-2" type="search" data-apos-search-field value="{{ data.query.q | e }}" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary my-2 my-sm-0" value="Search" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    {% for doc in data.docs %}
+      <h4>{% if doc._url %}<a href="{{ doc._url }}">{% endif %}{{ doc.title }}{% if doc._url %}</a>{% endif %}</h4>
+    {% endfor %}
+    {% include "pager.html" %}
+  </div>
+
+{% endblock %}
+

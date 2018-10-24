@@ -1,0 +1,11 @@
+{% import "apostrophe-schemas:macros.html" as schemas %}
+
+<form class="contact-form" data-contact-form>
+  <h4>Contact Me</h4>
+  {{ schemas.fields(data.schema, { tabs: false, fieldClasses: "form-control" }) }}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {# Later gets hoisted out and becomes visible #}
+  <div class="thank-you" data-thank-you>
+    <h4>Thank you for getting in touch! I'll respond soon.</h4>
+  </div>
+</form>

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% import "macros/utils.html" as utils with context %}
+{% block main %}
+<!-- Page Content -->
+<div class="container py-3">
+
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4">{{ data.piece.title }} </h1>
+  <!-- Portfolio Item Row -->
+  <div class="row">
+    <div class="col-md-6">
+      <a href="{{ data.piece.link }}" target="_blank" and rel="noopener noreferrer">
+        <img class="card-img-top"  alt="Thumbnail [100%x225]" style="display: block;"
+        {% if data.piece.image %}
+          src="{{ apos.attachments.url(data.piece.image) }}"
+        {% else %}
+          src="https://placehold.it/750x300"
+        {% endif %}
+        data-holder-rendered="true">
+      </a>
+    </div>
+    <div class="col-md-6">
+      <h3 class="my-3">Project Description</h3>
+      <p>{{ data.piece.description }}</p>
+      {% if data.piece.link %}
+        <a href="{{ data.piece.link }}" target="_blank" and rel="noopener noreferrer" > <h4 class="my-2">Live Demo</h4><a>
+      {% endif %}
+      <h3 class="my-3">Project Details</h3>
+      <ul>
+        <li>Lorem Ipsum</li>
+      </ul>
+      <h3 class="my-3">Technologies</h3>
+        {% include 'icons.html' %}
+
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+  <div class="row my-4">
+    <div class="col">
+      <h3 class="my-3">Sample Code</h3>
+        {{ apos.singleton(data.piece, 'github5', 'github-embed') }}
+    </div>
+  </div>
+
+  <!-- Related Projects Row -->
+  <h3 class="my-4">Related Projects</h3>
+
+  <div class="row">
+  {% for piece in data %}
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+        <img class="img-fluid" src="https://placehold.it/500x300" alt="">
+      </a>
+    </div>
+  {% endfor %}
+
+  </div>
+
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock %}

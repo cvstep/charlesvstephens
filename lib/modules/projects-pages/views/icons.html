@@ -1,0 +1,16 @@
+<ul class="list-inline dev-icons">
+{% for icon in piece.technologies %}
+  <li class="list-inline-item">
+    <i class="fab {{ icon }}"></i>
+  </li>
+{% endfor %}
+</ul>
+<div class="d-flex justify-content-between align-items-center">
+  <ul class="list-inline dev-icons">
+    {% for icon in data.piece.technologies %}
+      <li class="list-inline-item">
+        <i class="fab {{ icon }}" data-toggle="tooltip" data-placement="top" title="{{ icon }}"></i>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

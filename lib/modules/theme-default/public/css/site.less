@@ -1,0 +1,176 @@
+@import "utils/reset.less";
+@import (less) "vendor/bootstrap.css";
+@import (less) "vendor/fontawesome-free/css/all.css";
+
+@import "utils/_variables.less";
+@import "utils/_fonts.less";
+@import "utils/_icons.less";
+@import "utils/_forms.less";
+@import "utils/_effects.less";
+
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'league-spartan', serif;
+}
+
+.apos-refreshable {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  padding-bottom: 70px;
+  /* height of your footer */
+  position: relative;
+}
+/**
+ * Header Styles
+ */
+.bg-dark  {
+  background-color: @primary-dark !important;
+}
+.github-embed-nav {
+  background-color: @primary-dark !important;
+  color: #fff;
+}
+.navbar-toggler,
+.card-img-top {
+  border-radius: 0px;
+}
+
+/**
+ * End Header
+ */
+
+/**
+ * Login Styles
+ */
+.apos-login-wrapper,
+.apos-login-content {
+  background-color: @apos-light;
+  color: @primary-text;
+}
+.apos-login.apos-ui {
+  background-color: @primary-dark !important;
+}
+.apos-login-reset {
+  color: @primary-text;
+}
+
+/**
+ * End Login
+ */
+
+/**
+ * Footer Styles
+ */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: @primary-light;
+}
+
+
+
+
+.tabs {
+  margin: auto;
+  list-style: none;
+  text-align: center;
+  .tab {
+    display: inline-block;
+    padding: 20px;
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
+    &.active {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  list-style: none;
+  padding: 20px 32px;
+  .breadcrumb {
+    display: inline-block;
+    &:after {
+      content: ' » ';
+      display: inline-block;
+      padding: 0 16px;
+    }
+    &:last-child:after {
+      content: '';
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+/**
+ * --
+ */
+
+
+
+
+
+.two-column-area {
+  float: left;
+  width: 50%;
+}
+
+.apos-image-widget-image-title {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+// Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
+body {
+  background-color: @apos-light;
+}
+
+@apos-primary: @primary;
+.main-content {
+  //font-family: 'Karla', sans-serif;
+  margin: 100px auto 200px auto;
+  padding: 20px;
+  max-width: 500px;
+  color: @apos-white;
+  background-color: @apos-primary;
+  .apos-drop-shadow;
+
+  .login-link {
+    float: right;
+    color: @apos-white;
+  } // Basic rich-text editor styles:
+}
+
+.apos-ui .apos-button--global .apos-button-label {
+  color: @apos-white;
+}
+a.apos-button--major:not([href]):not([tabindex]),
+a.apos-button--danger:not([href]):not([tabindex]) {
+  color: @apos-white;
+}
+

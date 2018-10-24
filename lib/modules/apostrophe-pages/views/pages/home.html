@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<section class="jumbotron text-center">
+  <div class="container">
+    {{ apos.area(data.page, 'body2', {
+    widgets: {
+      'apostrophe-rich-text': {
+        toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+        styles: [
+          { name: 'Heading', element: 'h1', attributes: { 'class': 'jumbotron-heading'}  },
+          { name: 'Subheading', element: 'h4' },
+          { name: 'Paragraph', element: 'p', attributes: { 'class': 'lead text-muted'}   }
+        ]
+      }
+    }
+    })
+    }}
+    <p>
+      <a href="/projects" class="btn btn-primary my-2">Checkout Projects</a>
+      <a href="/contact" class="btn btn-secondary my-2">Contact Me</a>
+    </p>
+  </div>
+</section>
+<section class="album py-5 bg-light">
+  <div class="container">
+    <h2>Recent Projects</h2>
+    {{apos.area(data.page, 'project', {
+        widgets: {
+          'projects': {}
+        }
+      }
+    )}}
+  </div>
+</section>
+<section class="jumbotron text-left">
+  <div class="container">
+    <h2>Skill Set</h2>
+  </div>
+
+</section>
+
+
+{% endblock %}

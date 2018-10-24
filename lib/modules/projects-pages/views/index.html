@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% import "macros/utils.html" as utils with context %}
+{% block main %}
+    <div class="container">
+      <!-- Page Heading -->
+      <h2 class="my-4">Recent Projects
+      </h2>
+      {% for piece in data.pieces %}
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="{{ piece._url }}">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 300px; width: 100%; display: block;"
+            {% if piece.image %}
+              src="{{ apos.attachments.url(piece.image) }}"
+            {% else %}
+              src="https://placehold.it/700x300"
+            {% endif %}
+            data-holder-rendered="true">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>{{ piece.title }}</h3>
+          <p>{{ piece.summary }}</p>
+          {% include 'icons.html' %}
+          <a class="btn btn-primary" href="{{ piece._url }}">View Project</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+      {% endfor %}
+      {% import 'apostrophe-pager:macros.html' as pager with context %}
+      {{ pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }}
+
+    </div>
+{% endblock %}
